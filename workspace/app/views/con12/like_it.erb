@@ -1,0 +1,21 @@
+<div id="sumoflike">
+    <h1>이두희 더럽...♡</h1>
+    <p><span id="count"><%= @likes.count %></span>명의 사람들이 좋아합니다.</p>
+</div>
+<button id="like">좋아요</button>
+<script>
+    $(function(){ // 페이지 로딩 후 수행
+        $("#like").click(
+            function(){ // 함수로 동작을 정의
+            $.ajax({
+                data: { id: <%= @likes.id %> },
+                url: "/con12/increaseCount",
+                success: function(){
+                    var c = $("#count").html();
+                    c++;
+                    $("#count").text(c);
+                }
+            });
+        });
+    });
+</script>

@@ -1,0 +1,10 @@
+<%= render :partial => "con8/title" %>
+
+<% if session[:user_id].nil? %>
+<a href="/con8/login">go to Log-in</a><br>
+<a href="/">Go Main</a>
+<% else %>
+Welcome, <%= @username %><br>
+<a href="/con8/logout">go to Log-out</a><br>
+<a href="/">Go Main</a>
+<% end %>

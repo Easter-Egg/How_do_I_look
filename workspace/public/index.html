@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <title>How do i Look?</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="blog.css" rel="stylesheet">
+    
+    <script type="text/javascript">
+
+    function realtimeClock() {
+      document.getElementById("timestamp").innerHTML = getTimeStamp();
+      setTimeout("realtimeClock()", 1000);
+    }
+    
+    
+    function getTimeStamp() { // 24시간제
+      var d = new Date();
+    
+      var s =
+        leadingZeros(d.getHours(), 2) + ':' +
+        leadingZeros(d.getMinutes(), 2) + ':' +
+        leadingZeros(d.getSeconds(), 2);
+    
+      return s;
+    }
+    
+    
+    function leadingZeros(n, digits) {
+      var zero = '';
+      var i;
+      n = n.toString();
+    
+      if (n.length < digits) {
+        for (i = 0; i < digits - n.length; i++)
+          zero += '0';
+      }
+      return zero + n;
+    }
+    
+    </script>
+
+
+  </head>
+
+  <body style = "font-family : Nanum-Gothic" onload="realtimeClock()">
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item active" href="#">Home</a>
+          <a class="blog-nav-item" href="#Iam">I am</a>
+          <a class="blog-nav-item" href="#profile">Profile</a>
+          <a class="blog-nav-item" href="#doing">Doing</a>
+          <a class="blog-nav-item" href="/con1/act1">Create pages using 'Ruby on Rails'</a>
+          <a class="blog-nav-item" href="/con2/act2">Check it! 'The previous existence'</a>
+          <a class="blog-nav-item" href="/con3/input">No duplicate</a>
+          <a class="blog-nav-item" href="/con4/input">Simple Twitter? It's Real!</a>
+          <a class="blog-nav-item" href="/con5/read">Twitter on Timeline</a>
+          <a class="blog-nav-item" href="/con6/nokogirii">Using Nokogiri</a>
+          <a class="blog-nav-item" href="/con7/whats_your_name">전생 확인하기 - 끝판왕!</a>
+          <a class="blog-nav-item" href="/con8/index.html">Log IN & OUT</a>
+          <a class="blog-nav-item" href="/con9/index">Mailer, Mailer!</a>
+          <a class="blog-nav-item" href="/con10/index">Useful Divise</a>
+          <a class="blog-nav-item" href="/con11/present">여자친구도 없는데 무슨 선물이야</a>
+          <a class="blog-nav-item" href="/con12/index">비동기 어쩌구 저쩌구 - ajax</a>
+          <a class="blog-nav-item" href="/con12/like_it">누군가가 이런 말을 했습니다</a>
+          <span id="timestamp" class="blog-nav-item"></span>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title">How do i look?</h1>
+        <p class="lead blog-description">Let me introduce, first.</p>
+      </div>
+      <br id="Iam">
+      <hr>
+
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+
+          <div class="blog-post">
+            <h2 class="blog-post-title">My name is Taewoo kim</h2>
+            <p class="blog-post-meta">July 4, 2015 by <a href="https://www.facebook.com/taewoo.kim.3910829" target="_blank">Taewoo kim</a></p>
+
+            <p>이 블로그는 멋쟁이사자처럼에서 진행하는 과정을 담아내는 블로그 입니다.</p>
+            <hr>
+            <p>평범한 대학생이지만 꾸는 꿈은 비범합니다.</p>
+            <blockquote>
+              <p><em>Be a tail to lions rather than a head to foxes.</em></br> -Talmud</p>
+            </blockquote>
+            <h3><b>The skid marks on the road.</b></h3>
+            <p>　보통 인생을 마라톤 혹은 레이싱, 경주라고 비유를 합니다. 이러한 경쟁에서 1등을 하는 것이 대부분의 사람들의 목표일 것입니다. 저 또한 ‘1등을 하면 좋을 것 같다’ 라고 생각했습니다. 하지만 생각을 잠깐 다르게 하면, 1등을 못한 나머지는 승부에서 진 패자인 것입니다. <strong>결국 개인의 성공이라는 기준에 미치지 못하면 인생이란 경주에서 모두 패배하는 셈입니다.</strong>
+            <p>　그래서 저는 ‘1등만을 바라보고 나아가지 말자’ 라고 생각합니다. 그리고 자동차가 지나가면서 남기는 흔적인 ‘skid mark’ 처럼 인생이라는 마라톤 혹은 레이싱에서 제 자신만의 흔적을 남기기 위해서 오늘도 노력하고 있습니다.</p>
+            <br id="profile">
+            <hr>
+            <h2>Profile</h2>
+            <ul>
+              <li>Age : <b>Half of fifty</b></li>
+              <li>Phone : 010-7746-2213</li>
+              <li>E-mail : tu_k@naver.com</li>
+              <li>Interesting : Basketball, Hiphop, Computer, Operating System, RCP(Rich Client Platform), Web, Game</li>
+            </ul>
+            <p style = "margin-left : 80%;">　#skidmarkii</p>
+            <hr id="doing">
+            
+            <h2>What i do</h2>
+            <a href = "https://www.facebook.com/groups/codin9cafe" target="_blank"><img src = "Codin9Cafe.png" style = "display : inline-block; width : 100px; height : 100px;"/></a>
+            <span> - Coding 및 IT 관련 관심사 커뮤니티를 운영중입니다.</span><br>
+            <pre><code>/* 운영체제를 공부하고 있습니다. */
+int pthread_mutex_lock(pthread_mutex_t *mutex);
+int pthread_mutex_unlock(pthread_mutex_t *mutex);</code></pre><br>
+            
+            <a href = "https://www.satreci.com/" target="_blank"><img src = "si.png" style = "display : inline-block; width : 100px; height : 50px;"/></a>
+            <span> - 쎄트렉아이에서 인턴으로 일하고 있습니다.</span><br><br>
+            <pre><code>/* Eclipse RCP에 대해 배우고 있습니다. */
+public void createInitialLayout(IPageLayout layout) {
+		layout.setFixed(true);
+		layout.addStandaloneView(BrowserView.ID, false, IPageLayout.LEFT,
+				0.35f, IPageLayout.ID_EDITOR_AREA);
+		layout.addStandaloneView(PathView.ID, false, IPageLayout.TOP,
+		    0.05f, BrowserView.ID);
+}</code></pre><br>
+            <a href = "https://likelion.net" target="_blank"><img src = "logo.png" style = "display : inline-block; width : 100px; height : 25px;"/></a>
+            <span> - 멋쟁이사자처럼 3기로 활동하고 있습니다.</span><br><br>
+            <pre><code># 루비를 이용한 웹서비스 개발
+    def read
+        @posts = Post.all
+    end 
+
+    def write
+        post = Post.new
+        post.pname = params[:pname]
+        post.pwd = Digest::SHA256.hexdigest params[:password]
+        post.content =  params[:content]
+        post.my_image = params[:my_image]
+        post.save
+        redirect_to "/con5/read"
+    end</code></pre><br>
+            <hr>
+            </div>
+            <!--
+          <nav>
+            <ul class="pager">
+              <li><a href="#">Previous</a></li>
+              <li><a href="#">Next</a></li>
+            </ul>
+          </nav>
+          -->
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset" style = "text-align : center;">
+            <img src="profile.jpg" style = "width : 180px; height : 250px;"/>
+            <hr>
+            <h4>What is a skid mark?</h4>
+              <p>급브레이크를 밟거나 했을 때 자동차가 미끄러지면서 노면에 남기게 되는, 타이어의 검은 자국.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Memorial</h4>
+            <ol class="list-unstyled">
+              <li><a href="https://www.facebook.com/skidmarkii">July 2015 - 세트렉아이 인턴</a></li>
+              <br>
+              <li><a href="http://likelion.net">June 2015 - 멋쟁이 사자처럼 3기</a></li>
+              <br>
+              <li><a href="http://www20.kr/">September 2014 - 웹 컨퍼런스</a></li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="https://github.com/Skidmarkii" target="_blank">GitHub</a></li>
+              <li><a href="https://www.vingle.net/tuxD" target="_blank">Vingle</a></li>
+              <li><a href="https://www.facebook.com/taewoo.kim.3910829" target="_blank">Facebook</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

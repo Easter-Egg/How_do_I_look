@@ -1,0 +1,26 @@
+<textarea id="contents"></textarea>
+<a href="#" id="submit_button">전송</a>
+</br>
+<div id="post_div">
+    <% @posts.each do |p| %>
+        <%= p.content %> </br>
+    <% end %>
+</div>
+<script>
+    $(function(){ // 페이지 로딩 후 수행
+        $("#submit_button").click(
+            function(){ // 함수로 동작을 정의
+            
+            $.ajax({
+                data: { content: $("#contents").val() },  // What
+                url: "/con12/send_msg", // Where
+                success: function(){ // And then
+                    var txt = $("#contents").val();
+                    $("#post_div").append(txt + "</br>");
+                    $("#contents").val('');
+                    $("#contents").focus();
+                }
+            });
+        });
+    });
+</script>

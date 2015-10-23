@@ -1,0 +1,32 @@
+<h1><%= @sayHello %></h1>
+<h2><%= @sayHello %></h2>
+<p><%= @sayHello %></p>
+
+<h1>임의의 숫자 6개 + 보너스 <%= @array %> + <%= @alpha %></h1>
+<p>Homework : 이름을 입력하면 전생을 알려주는 간단한 페이지 작성</p>
+
+<br><br>
+<h2>150710 - 루비 익히기</h2>
+<% 10.downto(1) do |num| %>
+<% if(num).modulo(2) == 0 %>
+<p><%= num %> is even number.</p>
+<% else %>
+<p><%= num %> is odd number.</p>
+<% end %>
+<% end %>
+
+<br>
+<% animal = ["돼지", "닭", "소"] %>
+<% digest = [1, 2, 3, 4, 5] %>
+
+<% a = 1 %> <% b = "안녕" %>
+<% a = a + 1 %> <% b = b + "하세요" %>
+
+<h1 style = "font-size : 100px; text-ailgn:center">
+    <%= a %>
+    <%= b %>
+</h1>
+
+<% animal.each do |y| %>
+<h3><%= y %></h3>
+<% end %>

@@ -1,0 +1,6 @@
+<h1>Check Password</h1>
+<p>[<%= @postID %>] <%= @pname %> : <%= @content %></p>
+<form action="/con5/delete/<%= @postID %>" method="POST">
+    Type password >> <input type="password" name="password"><input type="submit" value="delete">
+</form><br>
+<a href="/">Go Back</a>

@@ -1,0 +1,10 @@
+<h1>Modify Page</h1>
+
+<form action="/con5/update/<%=@checkPost.id%>" method="POST">
+    Name : <input type="text" value="<%= @checkPost.pname %>" name="new_pname"><br>
+    Content : <br>
+    <textarea rows="3" cols="50" name="new_content"><%= @checkPost.content %></textarea>
+    <input type="submit" value="modify">
+</form>
+
+<a href = "/con5/read">Go back</a>

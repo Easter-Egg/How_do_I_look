@@ -1,0 +1,39 @@
+<h1>Upgraded Simple Twitter</h1>
+
+
+<!-- 이미지 업로드는 carrierwave -->
+<form action="/con5/write" method="POST" enctype="multipart/form-data">
+    Name : <br><input type="text" name="pname"><br><br>
+    Content : <br><textarea rows="3" cols="50" name="content"></textarea><br>
+    Upload : <input type="file" name="my_image"><br>
+    Password : <input type="password" name="password" >
+    
+    <input type="submit" value="Twit"/>
+    <br><br><br>
+    
+    
+</form> 
+
+
+<h2>Timeline</h2>
+<% @posts.reverse_each do |p| %>
+    <img src="<%= p.my_image.url %>"><br>
+    <%= p.pname %> : <%= p.content %>
+    <a href="/con5/check/<%= p.id %>" style="text-decoration:none;">[x]</a>
+    <a href="/con5/modify/<%= p.id %>" style="text-decoration:none;">[m]</a>
+    <br>
+    
+    <!-- reply 출력 -->
+    <% p.replies.reverse_each do |r| %>
+        ---> RE : <%= r.content %> <br>
+    <% end %>
+    
+    <form action="/con5/reply" type="POST">
+        ---> Reply: 
+        <input type="hidden" name="post_id" value="<%= p.id %>">
+        <input type="text" name="myreply">
+        <input type="submit" value="reply">
+        <br>
+    </form>
+    <br>
+<% end %>
